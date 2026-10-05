@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f43397">
+<title>ShadeScan — Meesho ShadeMatch prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="app">
+<div class="shell">
+  <header class="topbar">
+    <span class="wordmark">meesho</span>
+    <span class="product">ShadeScan</span>
+  </header>
+
+  <nav class="tabs three" id="tabs" data-active="scan">
+    <button data-tab="scan" aria-current="page">Shade scan</button>
+    <button data-tab="tryon">Try on face</button>
+    <button data-tab="swatch">Swatch test</button>
+    <span class="indicator" aria-hidden="true"></span>
+  </nav>
+
+  <main>
+    <section class="panel" id="panel-scan">
+      <div class="stage" id="scanStage" data-mode="idle">
+        <video id="scanVideo" playsinline muted></video>
+        <div class="plate" id="plate">
+          <canvas id="frameCanvas"></canvas>
+          <button class="pickarea" id="pickArea" aria-label="Tap the photo to read a colour"></button>
+          <div class="markers" id="markers"></div>
+        </div>
+        <div class="frameline"><i></i><i></i><i></i><i></i></div>
+        <div class="sweep"></div>
+        <div class="readout"><span class="chipsw" id="readoutSwatch"></span><span id="readoutText">Camera off</span></div>
+        <div class="placeholder"><span class="plogo"></span><p>Start the camera, or load a photo</p></div>
+      </div>
+
+      <div class="toolbar">
+        <button class="primary" id="captureBtn">Capture</button>
+        <button class="ghost" id="retakeBtn" hidden>Retake</button>
+        <button class="ghost" id="cameraBtn">Camera</button>
+        <button class="ghost icon" id="flipBtn" title="Switch camera" aria-label="Switch camera">⟲</button>
+        <label class="ghost file">Photo<input type="file" id="fileInput" accept="image/*"></label>
+      </div>
+
+      <p class="status" id="scanStatus">Capture a photo, then tap any point on it to read that colour.</p>
+
+      <section class="card" id="samples" hidden>
+        <div class="cardhead">
+          <h3>Sampled points</h3>
+          <button class="link" id="clearSamples">Clear all</button>
+        </div>
+        <div class="strip" id="sampleStrip"></div>
+        <p class="compare" id="compare" hidden></p>
+      </section>
+
+      <section class="card" id="result" hidden>
+        <div class="resulthead">
+          <canvas class="loupe" id="loupe" width="120" height="120"></canvas>
+          <div class="headtext">
+            <div class="bighex" id="bigHex">#000000</div>
+            <div class="confidence" id="confidence"></div>
+          </div>
+          <div class="headactions">
+            <button class="chipbtn" id="copyHex">Copy</button>
+            <button class="chipbtn solid" id="toTryOn">Try on</button>
+          </div>
+        </div>
+        <div class="shopfor">
+          <h4>Shop this shade in</h4>
+          <div class="catgrid" id="catGrid"></div>
+        </div>
+        <dl class="formats" id="formats"></dl>
+        <div class="matches" id="matches"></div>
+      </section>
+    </section>
+
+    <section class="panel" id="panel-tryon" hidden>
+      <div class="stage faces" id="tryStage">
+        <video id="tryVideo" playsinline muted></video>
+        <canvas id="tryCanvas"></canvas>
+        <div class="hint" id="tryHint">Camera off</div>
+      </div>
+
+      <div class="toolbar">
+        <button class="primary" id="tryBtn">Start camera</button>
+        <button class="ghost" id="stopTryBtn">Stop</button>
+      </div>
+
+      <p class="status" id="tryStatus">Colour is painted onto your own lips and lids, not onto a drawing.</p>
+
+      <section class="card">
+        <div class="cardhead">
+          <label class="switch"><input type="checkbox" id="lipsOn" checked><span></span>Lip colour</label>
+          <div class="segment" id="lipFinish">
+            <button data-finish="Matte" aria-pressed="true">Matte</button>
+            <button data-finish="Glossy">Glossy</button>
+            <button data-finish="Sheer">Sheer</button>
+          </div>
+        </div>
+        <div class="swatches" id="lipSwatches"></div>
+        <label class="slider">Intensity<input type="range" id="lipIntensity" min="20" max="100" value="68"></label>
+      </section>
+
+      <section class="card">
+        <div class="cardhead">
+          <label class="switch"><input type="checkbox" id="eyesOn"><span></span>Eye shadow</label>
+          <div class="segment" id="eyeFinish">
+            <button data-finish="Matte" aria-pressed="true">Matte</button>
+            <button data-finish="Shimmer">Shimmer</button>
+          </div>
+        </div>
+        <div class="swatches" id="eyeSwatches"></div>
+        <label class="slider">Intensity<input type="range" id="eyeIntensity" min="15" max="90" value="50"></label>
+      </section>
+    </section>
+
+    <section class="panel" id="panel-swatch" hidden>
+      <div class="stage" id="swatchStage" data-mode="idle">
+        <video id="swatchVideo" playsinline muted></video>
+        <div class="plate" id="swatchPlate">
+          <canvas id="swatchFrame"></canvas>
+          <canvas id="paintCanvas"></canvas>
+          <span class="skinpin" id="skinPin" hidden></span>
+        </div>
+        <div class="readout"><span class="chipsw" id="swatchSwatch"></span><span id="swatchReadout">Camera off</span></div>
+        <div class="placeholder"><span class="plogo"></span><p>Capture the back of your hand, or load a photo</p></div>
+      </div>
+
+      <div class="toolbar">
+        <button class="primary" id="swatchCapture">Capture</button>
+        <button class="ghost" id="swatchRetake" hidden>Retake</button>
+        <button class="ghost" id="swatchCamera">Camera</button>
+        <label class="ghost file">Photo<input type="file" id="swatchFile" accept="image/*"></label>
+      </div>
+
+      <p class="status" id="swatchStatus">Swatch a shade on your hand the way you would in a shop, then see how it sits against your own skin.</p>
+
+      <section class="card">
+        <div class="cardhead">
+          <h3>Shades to test</h3>
+          <button class="link" id="swatchClear">Clear paint</button>
+        </div>
+        <div class="segment catpick" id="swatchCats"></div>
+        <div class="swatches" id="swatchTray"></div>
+        <div class="toolrow">
+          <button class="chipbtn" id="modePaint" aria-pressed="true">Paint</button>
+          <button class="chipbtn" id="modeSkin" aria-pressed="false">Pick skin tone</button>
+          <button class="chipbtn" id="undoStroke">Undo</button>
+        </div>
+        <label class="slider">Brush<input type="range" id="brushSize" min="3" max="18" value="8"></label>
+        <label class="slider">Strength<input type="range" id="brushStrength" min="30" max="100" value="85"></label>
+      </section>
+
+      <section class="card" id="verdicts" hidden>
+        <div class="cardhead"><h3>How these read on you</h3></div>
+        <div id="verdictList"></div>
+      </section>
+
+      <section class="card">
+        <div class="cardhead">
+          <h3>My beauty profile</h3>
+          <button class="link" id="profileClear">Clear</button>
+        </div>
+        <div class="profileform">
+          <p class="fieldlabel">Skin tone<em id="skinSource">not set</em></p>
+          <div class="quiz" id="skinSteps"></div>
+          <p class="fieldlabel">Undertone</p>
+          <div class="quiz" id="undertoneOpts"></div>
+          <p class="fieldlabel">Finishes you prefer</p>
+          <div class="quiz" id="finishOpts"></div>
+          <p class="fieldlabel">Usual budget</p>
+          <div class="quiz" id="budgetOpts"></div>
+          <p class="fieldnote">Saved on this device only. It changes what the suitability notes say, nothing else.</p>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="foot">Digital swatches stay approximate. Colour shifts with lighting and application. Suitability notes are suggestions, not rules — wear what you like.</footer>
+</div>
+<script type="module" src="app.js"></script>
+</body>
+</html>

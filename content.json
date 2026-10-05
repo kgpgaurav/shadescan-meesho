@@ -1,0 +1,370 @@
+{
+ "reviews": {
+  "lipstick": [
+   {
+    "stars": 5,
+    "text": "Shade is exactly like the swatch on the listing. Stayed through lunch, only needed a touch up after.",
+    "author": "Ritika S.",
+    "context": "Medium, warm undertone",
+    "photo": true
+   },
+   {
+    "stars": 4,
+    "text": "Colour is good but it dries the lips a little. I put balm underneath and then it is fine.",
+    "author": "Anjali M.",
+    "context": "Fair, neutral undertone",
+    "photo": false
+   },
+   {
+    "stars": 2,
+    "text": "On my pigmented lips this looked much darker than the photo. Not the seller's fault but be warned.",
+    "author": "Shweta P.",
+    "context": "Deep, pigmented lips",
+    "photo": true
+   },
+   {
+    "stars": 5,
+    "text": "Bought after seeing a creator use it. Same shade arrived, that was the main thing for me.",
+    "author": "Priya K.",
+    "context": "Medium-deep, warm undertone",
+    "photo": true
+   },
+   {
+    "stars": 3,
+    "text": "Decent for the price. Transfers on cups which the listing does not mention.",
+    "author": "Neha R.",
+    "context": "Medium, cool undertone",
+    "photo": false
+   },
+   {
+    "stars": 4,
+    "text": "Two coats needed for the colour in the picture. One coat is more like a tint.",
+    "author": "Divya T.",
+    "context": "Fair, warm undertone",
+    "photo": true
+   },
+   {
+    "stars": 1,
+    "text": "Received a different shade from what I ordered. Returned it without any trouble though.",
+    "author": "Kavya B.",
+    "context": "Medium, neutral undertone",
+    "photo": false
+   },
+   {
+    "stars": 5,
+    "text": "Lightweight, does not feel sticky. I wear it to college daily.",
+    "author": "Megha J.",
+    "context": "Medium, neutral undertone",
+    "photo": false
+   },
+   {
+    "stars": 4,
+    "text": "Suits my skin better than the brighter reds I own. Daylight photo on the listing helped me decide.",
+    "author": "Sanya V.",
+    "context": "Deep, cool undertone",
+    "photo": true
+   },
+   {
+    "stars": 3,
+    "text": "Good colour, but the applicator is too wide for the cupid's bow.",
+    "author": "Pooja N.",
+    "context": "Fair, cool undertone",
+    "photo": false
+   }
+  ],
+  "eyeshadow": [
+   {
+    "stars": 5,
+    "text": "Pigment is strong, one dip is enough. Blends without patches.",
+    "author": "Ritika S.",
+    "context": "Medium, warm undertone",
+    "photo": true
+   },
+   {
+    "stars": 4,
+    "text": "The matte shades are better than the shimmer ones, which have some fallout.",
+    "author": "Anjali M.",
+    "context": "Fair, neutral undertone",
+    "photo": true
+   },
+   {
+    "stars": 2,
+    "text": "Chalky on my skin tone. Needed a primer to show up at all.",
+    "author": "Shweta P.",
+    "context": "Deep, neutral undertone",
+    "photo": false
+   },
+   {
+    "stars": 5,
+    "text": "Lasted a full wedding function without creasing.",
+    "author": "Priya K.",
+    "context": "Medium-deep, warm undertone",
+    "photo": true
+   },
+   {
+    "stars": 3,
+    "text": "Colour payoff is fine but the pan is smaller than it looks in the photo.",
+    "author": "Neha R.",
+    "context": "Medium, cool undertone",
+    "photo": false
+   },
+   {
+    "stars": 4,
+    "text": "Good everyday neutral. Not a dupe for the expensive one but close enough.",
+    "author": "Divya T.",
+    "context": "Fair, warm undertone",
+    "photo": false
+   },
+   {
+    "stars": 5,
+    "text": "Shimmer catches light nicely in photos, looks subtle in person.",
+    "author": "Megha J.",
+    "context": "Medium, neutral undertone",
+    "photo": true
+   },
+   {
+    "stars": 3,
+    "text": "Fallout under the eyes every time. Do your eyes before your base.",
+    "author": "Sanya V.",
+    "context": "Deep, cool undertone",
+    "photo": false
+   }
+  ],
+  "nail": [
+   {
+    "stars": 5,
+    "text": "Two coats and it is opaque. Dried fast enough that I did not smudge it.",
+    "author": "Ritika S.",
+    "context": "Medium, warm undertone",
+    "photo": true
+   },
+   {
+    "stars": 4,
+    "text": "Colour is accurate. Chipped at the tips around day four.",
+    "author": "Anjali M.",
+    "context": "Fair, neutral undertone",
+    "photo": true
+   },
+   {
+    "stars": 2,
+    "text": "Streaky in the first coat and needed three to look even.",
+    "author": "Shweta P.",
+    "context": "Deep, neutral undertone",
+    "photo": false
+   },
+   {
+    "stars": 5,
+    "text": "Brush is wide so it covers the nail in two strokes. Good for the price.",
+    "author": "Priya K.",
+    "context": "Medium-deep, warm undertone",
+    "photo": false
+   },
+   {
+    "stars": 3,
+    "text": "Shiny when fresh but loses the gloss after a day without top coat.",
+    "author": "Neha R.",
+    "context": "Medium, cool undertone",
+    "photo": false
+   },
+   {
+    "stars": 4,
+    "text": "Darker than it looks on screen, which I actually preferred.",
+    "author": "Divya T.",
+    "context": "Fair, warm undertone",
+    "photo": true
+   },
+   {
+    "stars": 1,
+    "text": "Bottle arrived half spilled inside the packet.",
+    "author": "Kavya B.",
+    "context": "Medium, neutral undertone",
+    "photo": false
+   },
+   {
+    "stars": 5,
+    "text": "Holds up through dishes and washing if you add a top coat.",
+    "author": "Megha J.",
+    "context": "Medium, neutral undertone",
+    "photo": false
+   }
+  ],
+  "hair": [
+   {
+    "stars": 5,
+    "text": "Covered my greys fully. Colour matched the box on my hair.",
+    "author": "Ritika S.",
+    "context": "Medium, warm undertone",
+    "photo": true
+   },
+   {
+    "stars": 4,
+    "text": "Good coverage but it faded to a lighter tone after about four washes.",
+    "author": "Anjali M.",
+    "context": "Fair, neutral undertone",
+    "photo": true
+   },
+   {
+    "stars": 2,
+    "text": "On dark hair this barely showed. You need to bleach first for the shade in the photo.",
+    "author": "Shweta P.",
+    "context": "Deep, neutral undertone",
+    "photo": false
+   },
+   {
+    "stars": 5,
+    "text": "No itching or smell issues for me. Did a patch test first as instructed.",
+    "author": "Priya K.",
+    "context": "Medium-deep, warm undertone",
+    "photo": false
+   },
+   {
+    "stars": 3,
+    "text": "The tube quantity is not enough for long hair. Order two.",
+    "author": "Neha R.",
+    "context": "Medium, cool undertone",
+    "photo": false
+   },
+   {
+    "stars": 4,
+    "text": "Came out slightly warmer than the box but still close.",
+    "author": "Divya T.",
+    "context": "Fair, warm undertone",
+    "photo": true
+   },
+   {
+    "stars": 5,
+    "text": "Hair felt soft after, the conditioner sachet helps.",
+    "author": "Megha J.",
+    "context": "Medium, neutral undertone",
+    "photo": false
+   },
+   {
+    "stars": 3,
+    "text": "Stained my forehead, use cream along the hairline before applying.",
+    "author": "Sanya V.",
+    "context": "Deep, cool undertone",
+    "photo": false
+   }
+  ]
+ },
+ "creators": {
+  "lipstick": [
+   {
+    "creator": "supriya.beauty",
+    "lighting": "Daylight, no colour filter",
+    "coats": "One coat, then layered",
+    "wear": "6 hr wear test",
+    "context": "Medium-deep, pigmented lips",
+    "disclosure": "Paid partnership",
+    "liked": "Colour on camera matched what arrived. Comfortable for the first few hours.",
+    "disliked": "Settles into lip lines by hour four and it does transfer onto cups."
+   },
+   {
+    "creator": "ananya.makes",
+    "lighting": "Indoor warm light",
+    "coats": "Two coats",
+    "wear": "4 hr wear test",
+    "context": "Medium, neutral undertone",
+    "disclosure": "Gifted sample",
+    "liked": "Even coverage in two coats and the applicator reaches the corners.",
+    "disliked": "Reads warmer indoors than it does outside, so check both before deciding."
+   },
+   {
+    "creator": "pooja.shades",
+    "lighting": "Daylight, no colour filter",
+    "coats": "One coat",
+    "wear": "5 hr wear test",
+    "context": "Fair-medium, cool undertone",
+    "disclosure": "Affiliate link",
+    "liked": "A calmer version of the brighter shades in this range, good for daily wear.",
+    "disliked": "Too sheer in one coat if you have pigmented lips."
+   },
+   {
+    "creator": "farah.lipdiary",
+    "lighting": "Daylight + indoor",
+    "coats": "Two coats",
+    "wear": "6 hr wear test",
+    "context": "Deep, neutral undertone",
+    "disclosure": "Gifted sample",
+    "liked": "Holds its colour on deeper skin instead of going ashy.",
+    "disliked": "Drying by the end of the day, needs balm underneath."
+   }
+  ],
+  "eyeshadow": [
+   {
+    "creator": "nidhi.glow",
+    "lighting": "Daylight, no colour filter",
+    "coats": "Packed on with a flat brush",
+    "wear": "8 hr wear test",
+    "context": "Medium, warm undertone",
+    "disclosure": "Paid partnership",
+    "liked": "Strong pigment, one dip covers the lid.",
+    "disliked": "The shimmer has noticeable fallout, do eyes before base."
+   },
+   {
+    "creator": "ananya.makes",
+    "lighting": "Indoor warm light",
+    "coats": "Blended with a fluffy brush",
+    "wear": "6 hr wear test",
+    "context": "Medium, neutral undertone",
+    "disclosure": "Gifted sample",
+    "liked": "Blends out without patchiness and the mattes do not go chalky.",
+    "disliked": "Needs a primer to last past six hours on oily lids."
+   },
+   {
+    "creator": "farah.lipdiary",
+    "lighting": "Daylight, no colour filter",
+    "coats": "Single wash of colour",
+    "wear": "7 hr wear test",
+    "context": "Deep, neutral undertone",
+    "disclosure": "Affiliate link",
+    "liked": "Shows up clearly on deeper skin without needing a white base.",
+    "disliked": "Pan is small for the price."
+   }
+  ],
+  "nail": [
+   {
+    "creator": "pooja.shades",
+    "lighting": "Daylight, no colour filter",
+    "coats": "Two coats, no top coat",
+    "wear": "5 day wear test",
+    "context": "Fair-medium, cool undertone",
+    "disclosure": "Gifted sample",
+    "liked": "Opaque in two coats and dries quicker than most at this price.",
+    "disliked": "Chips at the tips by day four without a top coat."
+   },
+   {
+    "creator": "nidhi.glow",
+    "lighting": "Indoor warm light",
+    "coats": "Two coats with top coat",
+    "wear": "7 day wear test",
+    "context": "Medium, warm undertone",
+    "disclosure": "Paid partnership",
+    "liked": "Holds gloss for about a week when a top coat is used.",
+    "disliked": "First coat goes on streaky, you have to commit to the second."
+   }
+  ],
+  "hair": [
+   {
+    "creator": "supriya.beauty",
+    "lighting": "Daylight, no colour filter",
+    "coats": "Full head application",
+    "wear": "4 week follow up",
+    "context": "Medium-deep, warm undertone",
+    "disclosure": "Paid partnership",
+    "liked": "Grey coverage was complete on the first application.",
+    "disliked": "Faded about two shades by the fourth week."
+   },
+   {
+    "creator": "farah.lipdiary",
+    "lighting": "Daylight + indoor",
+    "coats": "Roots only",
+    "wear": "3 week follow up",
+    "context": "Deep, neutral undertone",
+    "disclosure": "Gifted sample",
+    "liked": "Matched the existing length well, no obvious line at the roots.",
+    "disliked": "On unbleached dark hair the shade in the box is not achievable."
+   }
+  ]
+ }
+}

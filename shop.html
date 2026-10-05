@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f43397">
+<title>Shop by shade — Meesho ShadeMatch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="store">
+<header class="storebar" id="storeHeader"></header>
+<nav class="catbar" id="catBar"></nav>
+
+<main class="storemain">
+  <aside class="filters" id="filters">
+    <div class="filterhead">
+      <h2>Filters</h2>
+      <button class="link" id="resetFilters">Reset</button>
+    </div>
+
+    <section class="fgroup" id="shadeFilter" hidden>
+      <h3>Scanned shade</h3>
+      <div class="shadechip">
+        <span class="sw" id="shadeSw"></span>
+        <div>
+          <b id="shadeHex">#000000</b>
+          <em id="shadeCount">0 shades within range</em>
+        </div>
+      </div>
+      <label class="rangerow">Closeness<input type="range" id="tolerance" min="4" max="40" value="14"></label>
+      <p class="rangenote" id="toleranceNote"></p>
+    </section>
+
+    <section class="fgroup">
+      <h3>Colour</h3>
+      <div class="chips" id="familyChips"></div>
+    </section>
+
+    <section class="fgroup">
+      <h3>Finish</h3>
+      <div class="chips" id="finishChips"></div>
+    </section>
+
+    <section class="fgroup">
+      <h3>Price</h3>
+      <div class="chips" id="priceChips"></div>
+    </section>
+
+    <section class="fgroup">
+      <h3>Rating</h3>
+      <div class="chips" id="ratingChips"></div>
+    </section>
+  </aside>
+
+  <section class="results">
+    <div class="resulthead">
+      <div>
+        <h1 id="resultTitle">Lipstick</h1>
+        <p id="resultCount">Showing 0 products</p>
+      </div>
+      <label class="sortbox">Sort by
+        <select id="sortBy">
+          <option value="match">Shade match</option>
+          <option value="popular">Popularity</option>
+          <option value="low">Price: low to high</option>
+          <option value="high">Price: high to low</option>
+          <option value="rating">Customer rating</option>
+        </select>
+      </label>
+    </div>
+    <div class="appliedrow" id="applied"></div>
+    <div class="pgrid" id="grid"></div>
+    <p class="empty" id="empty" hidden>No shades match these filters. Loosen the closeness slider or clear a filter.</p>
+  </section>
+</main>
+
+<button class="filterfab" id="filterFab">Filters</button>
+<script type="module" src="shop.js"></script>
+</body>
+</html>
